@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="PTC Discipline">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#1b2430"/>
+  <target cx="26" cy="26" r="11" fill="none" stroke="#38d6a0" stroke-width="3"/>
+  <circle cx="26" cy="26" r="4.5" fill="#38d6a0"/>
+  <path d="M18 44h14M18 50h9" stroke="#7d8fa3" stroke-width="3" stroke-linecap="round"/>
+  <path d="M40 40l6 6 10-12" fill="none" stroke="#f2b134" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

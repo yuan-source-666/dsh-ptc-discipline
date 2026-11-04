@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "PTC 纪律",
+    "description": "PTC 模式的 agent preset，附带硬性闸门：没有目标、没有进行中的待办，任何工具调用都过不去。"
+  }
+}

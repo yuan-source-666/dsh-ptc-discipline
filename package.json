@@ -1,0 +1,41 @@
+{
+  "name": "dsh-ptc-discipline",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "PTC agent preset with a hard goal + todo gate: no tool call succeeds until an active goal and an in-progress todo exist.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuan-source-666/dsh-ptc-discipline.git"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "assets/icon-180.png",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "agent-preset",
+    "ptc",
+    "goal",
+    "todo",
+    "discipline"
+  ],
+  "scripts": {
+    "test": "node test/gate.test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

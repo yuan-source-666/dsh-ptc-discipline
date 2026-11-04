@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "PTC Discipline",
+    "description": "PTC agent preset with a hard goal + todo gate: no tool call succeeds until a goal and an in-progress todo exist."
+  }
+}
