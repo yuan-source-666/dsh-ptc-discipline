@@ -12,6 +12,12 @@ npx dsh plugin add yuan-source-666/dsh-ptc-discipline
 
 装好后在新建会话里选 **PTC 纪律** 这个 preset 即可生效。
 
+## 宣传视频
+
+![cover](docs/media/cover.png)
+
+[▶ 观看 31 秒宣传片](docs/media/ptc-discipline-promo.mp4) · [轻量 GIF 预览](docs/media/preview.gif)
+
 ## 它做什么
 
 | | |
