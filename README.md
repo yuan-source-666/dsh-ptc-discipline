@@ -16,7 +16,7 @@ npx dsh plugin add yuan-source-666/dsh-ptc-discipline
 
 ![cover](docs/media/cover.png)
 
-[▶ 观看 31 秒宣传片](docs/media/ptc-discipline-promo.mp4) · [轻量 GIF 预览](docs/media/preview.gif)
+[▶ 观看 49 秒宣传片](docs/media/ptc-discipline-promo.mp4) · [轻量 GIF 预览](docs/media/preview.gif)
 
 ## 它做什么
 
