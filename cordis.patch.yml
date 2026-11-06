@@ -4,6 +4,10 @@
 #   1. 多一行 ptc-discipline（本包的守护插件，注册在 preset scope 上，只作用于本 preset 的 agent）；
 #   2. 保留 tool-goal / tool-todo，并显式打开 allowParallelInProgress；
 #   3. workflow 系仍然禁用——run_code 已经是唯一的代码入口，不再叠一层执行语义。
+#
+# 适配 DSH 0.2.2：@deepseek-ai/dsh-tool-subagent-control 的 ./list-agents 子路径已移除
+# （list_agents 并入主包注册），故只保留主包行；modelSelectionSettings 更名为
+# modelSelection / modelDiscovery；并补上官方 ptc 预设的 tool-executor-ptc。
 - insert:
     - id: preset-ptc-discipline
       name: '@deepseek-ai/dsh-agent-preset'
@@ -99,14 +103,13 @@
             config:
               - id: tool-subagent-control
                 name: '@deepseek-ai/dsh-tool-subagent-control'
-              - id: tool-subagent-list-agents
-                name: '@deepseek-ai/dsh-tool-subagent-control/list-agents'
               - id: tool-subagent
                 name: '@deepseek-ai/dsh-tool-subagent'
                 config:
                   provider: spawn
                   toolName: subagent
-                  modelSelectionSettings: true
+                  modelSelection: true
+                  modelDiscovery: true
               - id: tool-subagent-fork
                 name: '@deepseek-ai/dsh-tool-subagent'
                 config:
@@ -140,6 +143,8 @@
               requireGoal: true
               requireTodo: true
               requireActiveTodo: true
+          - id: tool-executor-ptc
+            name: '@deepseek-ai/dsh-tool-executor-ptc'
           - id: present
             name: '@deepseek-ai/dsh-tool-present'
           - id: tool-plugin-manager

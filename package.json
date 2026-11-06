@@ -1,6 +1,6 @@
 {
   "name": "dsh-ptc-discipline",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "description": "PTC agent preset with a hard goal + todo gate: no tool call succeeds until an active goal and an in-progress todo exist.",
   "license": "MIT",

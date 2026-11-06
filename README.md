@@ -127,6 +127,20 @@ ok  goal/todo services absent (fail open)
 ok  prompt section                      # name/order/interpolate 校验
 ```
 
+## 兼容性（DSH 0.2.2+）
+
+本预设跟随 DSH 0.2.2 的官方 `ptc` 预设做了对齐，闸门逻辑**完全未改动**：
+
+| 项目 | 0.2.2 的变化 | 本预设的处理 |
+| --- | --- | --- |
+| `dsh-tool-subagent-control/list-agents` | 该子路径已从 `exports` 移除，`list_agents` 并入主包注册 | 删除子路径行，保留 `dsh-tool-subagent-control` 主包行 |
+| `modelSelectionSettings` | 更名为 `modelSelection`，并新增 `modelDiscovery` | 改用新键名 |
+| `dsh-tool-executor-ptc` | 官方 ptc 预设新增 | 一并加入 |
+
+> 注意：如果删掉 `dsh-tool-subagent-control` 整行（而不只是 `list-agents` 子路径），
+> 子 agent 的 `send_message` / `interrupt_agent` 控制工具会一并消失，子 agent 只能
+> 一次性返回结果、无法再追问或中断。
+
 ## 已知边界
 
 - **todo 每个新 turn 会清空**（`todos` projection 在 `turn/start` 重置），goal 跨 turn 存活。
